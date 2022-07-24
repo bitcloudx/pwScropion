@@ -15,8 +15,6 @@ def log_info(url_link, password, username, email, app_name):
             f"dbname={split_data[0]} user={split_data[1]} host='127.0.0.1' password={split_data[3]}")
         cursor = conn.cursor()
         postgres_insert = """INSERT INTO account_information (url_link, password, username, email, app_name) VALUES(%s, %s, %s, %s, %s)"""
-        record_to_insert = ('www.google.com', 'password123',
-                            'tigerman', 'akeller7281@gmail.com', 'Google')
         cursor.execute(postgres_insert, record_to_insert)
         conn.commit()
         cursor.close()
