@@ -1,3 +1,4 @@
 info.txt
 Pipfile
 Pipfile.lock
+secret.py
